@@ -49,6 +49,30 @@ public class modelService {
 	@Column(name = "data_chamado")
 	private String data_chamado;
 	
+	@Column(name = "desc_resolucao")
+	private String desc_resolucao;
+	
+	@Column(name = "fechamentohamado")
+	private String fechamento_chamado;
+	
+	
+	
+	public String getFechamento_chamado() {
+		return fechamento_chamado;
+	}
+
+	public void setFechamento_chamado(String fechamento_chamado) {
+		this.fechamento_chamado = fechamento_chamado;
+	}
+
+	public String getDesc_resolucao() {
+		return desc_resolucao;
+	}
+
+	public void setDesc_resolucao(String desc_resolucao) {
+		this.desc_resolucao = desc_resolucao;
+	}
+
 	public Long getId() {
 		return id;
 	}

@@ -75,6 +75,14 @@ public class ControllerAdmin {
 		return repositorioController.findByprioridadeChamado(prioridade_chamado);
 	}
 	
+	@GetMapping("usuarioLogin")
+	@ApiOperation(value = "Obter usuario")
+	public List<modelUsuario> GetUsuario (@RequestParam(value = "usuarioLogin")String nomeUsuario){
+		return repositorioController.findByByUsuarioLogin(nomeUsuario);
+	}
+	
+
+	
 	//Post usuario medio 
 	//
 	@PostMapping("admAAbrirChamado")
