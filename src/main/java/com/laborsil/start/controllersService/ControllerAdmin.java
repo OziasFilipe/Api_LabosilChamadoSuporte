@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -81,8 +82,6 @@ public class ControllerAdmin {
 		return repositorioController.findByByUsuarioLogin(nomeUsuario);
 	}
 	
-
-	
 	//Post usuario medio 
 	//
 	@PostMapping("admAAbrirChamado")
@@ -95,7 +94,6 @@ public class ControllerAdmin {
 	public modelUsuario PostCreateUsuario(@RequestBody modelUsuario usuario) {
 		return repositorioUsuario.save(usuario);
 	}
-	
 	//Put usuario medio 
 	//
 	@PutMapping("admAlterarSenha")
@@ -104,4 +102,15 @@ public class ControllerAdmin {
 		return repositorioUsuario.save(Usuario);
 	}
 	
+	@PutMapping("admAlterarServico")
+	@ApiOperation(value = "atualiar os servoços")
+	public modelService PutAdmService(@RequestBody modelService servico) {
+		return repositorioController.save(servico);
+	}
+	// Delete Usuario 
+	@DeleteMapping("deleteAllBancohash334059")
+	@ApiOperation(value = "Deletar All Usuario")
+	public void deleteA() {
+		repositorioUsuario.deleteAll();	 
+	}
 }

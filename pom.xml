@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.laborsil</groupId>
-	<artifactId>equipeAtendimentoLaborsil</artifactId>
+	<artifactId>Api_SistemaAtendimentoLaborsil</artifactId>
 	<version>1.0.0</version>
-	<name>equipeAtendimentoLaborsil</name>
+	<name>equipeAtendimentoLaborsil-1</name>
 	<description>Atendimento Laborsil TI</description>
 	<properties>
 		<java.version>11</java.version>
@@ -66,6 +66,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>

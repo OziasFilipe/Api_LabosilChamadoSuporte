@@ -52,10 +52,8 @@ public class modelService {
 	@Column(name = "desc_resolucao")
 	private String desc_resolucao;
 	
-	@Column(name = "fechamentohamado")
+	@Column(name = "fechamento_chamado")
 	private String fechamento_chamado;
-	
-	
 	
 	public String getFechamento_chamado() {
 		return fechamento_chamado;
