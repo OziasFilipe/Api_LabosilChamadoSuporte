@@ -26,6 +26,7 @@ import io.swagger.annotations.ApiOperation;
 @CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/")
+
 public class ControllerAdmin {
 
 	@Autowired 
