@@ -1,5 +1,6 @@
 package com.laborsil.start.controllersService;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.laborsil.start.model.modelService;
 import com.laborsil.start.model.modelUsuario;
 import com.laborsil.start.repositoryController.RepositoryController;
 import com.laborsil.start.repositoryController.RepositoryUsuario;
+import com.laborsil.start.service.Upload;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -35,6 +38,8 @@ public class ControllerAdmin {
 	@Autowired
 	private RepositoryUsuario repositorioUsuario;
 	
+	@Autowired
+	private Upload fileUpload;
 	//Get usuario medio 
 	//	
 	@GetMapping("postservice")
@@ -95,6 +100,13 @@ public class ControllerAdmin {
 	public modelUsuario PostCreateUsuario(@RequestBody modelUsuario usuario) {
 		return repositorioUsuario.save(usuario);
 	}
+	
+	
+	@PostMapping("upload")
+	public void uploadFile(@RequestParam ("file") MultipartFile file) throws IllegalStateException, IOException {
+		fileUpload.uploadfile(file);
+	}
+	
 	//Put usuario medio 
 	//
 	@PutMapping("admAlterarSenha")

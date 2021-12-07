@@ -1,5 +1,6 @@
 package com.laborsil.start.controllersService;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,11 +10,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.laborsil.start.model.modelService;
 import com.laborsil.start.model.modelUsuario;
 import com.laborsil.start.repositoryController.RepositoryController;
 import com.laborsil.start.repositoryController.RepositoryUsuario;
+import com.laborsil.start.service.Upload;
 
 import io.swagger.annotations.ApiOperation;
 
@@ -41,6 +44,7 @@ public class ControllerBasic {
 	public modelService PostBasicAbrirChamado(@RequestBody modelService chamado) {
 		return repositorioController.save(chamado);
 	}
+	
 	
 	//Put usuario medio 
 	//
