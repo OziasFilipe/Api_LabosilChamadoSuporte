@@ -10,6 +10,6 @@ import org.springframework.web.multipart.MultipartFile;
 public class Upload {
 
 	public void uploadfile(MultipartFile file) throws IllegalStateException, IOException {
-		file.transferTo(new File("C:\\Users\\ti\\Desktop\\TesteImagem\\"+file.getOriginalFilename()));
+		file.transferTo(new File("C:\\Users\\Ana Caroline\\Music\\MEmu Music\\"+file.getOriginalFilename()));
 	}
 }

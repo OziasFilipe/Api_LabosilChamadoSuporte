@@ -55,6 +55,17 @@ public class modelService {
 	@Column(name = "fechamento_chamado")
 	private String fechamento_chamado;
 	
+	@Column(name = "link_imagem")
+	private String link_imagem;
+	
+	public String getLink_imagem() {
+		return link_imagem;
+	}
+
+	public void setLink_imagem(String link_imagem) {
+		this.link_imagem = link_imagem;
+	}
+
 	public String getFechamento_chamado() {
 		return fechamento_chamado;
 	}
