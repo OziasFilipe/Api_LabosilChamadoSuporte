@@ -97,16 +97,15 @@ public class ControllerAdmin {
 	}
 	
 	@PostMapping("admACreateUsuario")
+	@ApiOperation(value = "Criar Usuario")
 	public modelUsuario PostCreateUsuario(@RequestBody modelUsuario usuario) {
 		return repositorioUsuario.save(usuario);
 	}
-	
 	
 	@PostMapping("upload")
 	public void uploadFile(@RequestParam ("file") MultipartFile file) throws IllegalStateException, IOException {
 		fileUpload.uploadfile(file);
 	}
-	
 	//Put usuario medio 
 	//
 	@PutMapping("admAlterarSenha")
